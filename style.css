@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -18,11 +19,7 @@ body, html {
     z-index: 0;
 }
 
-.container pre {
-    margin-top: -15px;
-    font-size: 19px;
-}
-
+/* Base styles for container */
 .container {
     position: relative;
     text-align: center;
@@ -30,6 +27,78 @@ body, html {
     font-size: 3rem;
     color: black;
     z-index: 10;
+
+}
+
+/* Glass effect for the .glass class */
+.glass {
+    margin: -100px;
+    height: 550px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background for glass effect */
+    border: 10px solid rgba(255, 255, 255, 0.425);
+    /* Slightly opaque border */
+    border-radius: 25px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding for internal spacing */
+    backdrop-filter: blur(10px);
+    /* Blur effect for the glass appearance */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari compatibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for 3D effect */
+    position: relative;
+    /* Ensure content positioning */
+    display: inline-block;
+    /* Adjust width based on content */
+}
+
+/* Style adjustments for the pre element inside .container */
+.container pre {
+    margin-top: -15px;
+    margin-bottom: -40px;
+    font-size: 19px;
+}
+
+/* Style for buttons inside .glass */
+.glass button {
+    margin-top: -100px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    /* Glass effect background */
+    border: 2px solid rgba(254, 255, 252, 0.3);
+    /* Slightly opaque border */
+    color: rgba(9, 9, 9, 0.699);
+    padding: 10px 20px;
+    /* Adjust padding to your preference */
+    border-radius: 10px;
+    /* Rounded corners */
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    /* Glass effect blur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for 3D effect */
+    transition:
+        background 0.3s ease,
+        border 0.3s ease,
+        color 0.3s ease,
+        font-size 0.3s ease,
+        width 0.3s ease,
+        height 0.3s ease;
+    /* Smooth transitions for button effects */
+}
+
+.glass button:hover {
+    font-size: 18px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background: rgba(255, 253, 253, 0.39);
+    /* Slightly more opaque on hover */
+    border: 4px solid rgb(255, 255, 255);
+    /* Slightly more opaque border on hover */
 }
 
 h1 {
@@ -38,7 +107,7 @@ h1 {
     margin-bottom: 0;
     z-index: 10;
     display: inline-block;
-    font-size: 6rem; 
+    font-size: 6rem;
     text-transform: uppercase;
 }
 
@@ -50,26 +119,13 @@ pre.fade-in {
     animation: fadeIn 5s ease-in-out;
 }
 
-button {
-    font-size: 15px;
-    background: rgba(255, 255, 255, 0.2); /* Glass effect background */
-    border: 2px solid rgba(254, 255, 252, 0.3); /* Slightly opaque border */
-    color: rgba(9, 9, 9, 0.699);
-    padding: 10px 20px; /* Adjust padding to your preference */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer;
-    backdrop-filter: blur(10px); /* Glass effect blur */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
-    transition: background 1.2s ease, border 0.3s ease;
-    z-index: 10;
-    animation: fadeIn 3s ease-in-out;
+
+
+
+button b {
+    color: rgba(0, 0, 0, 0.788);
 }
 
-button:hover {
-    color: white;
-    background: rgba(41, 39, 39, 0.39); /* Slightly more opaque on hover */
-    border: 2px solid rgb(255, 255, 255); /* Slightly more opaque border on hover */
-}
 
 .circle {
     position: absolute;
@@ -103,16 +159,83 @@ button:hover {
     left: 150px;
 }
 
+.container-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1000;
+    text-align: center;
+    justify-content: center;
+}
+
+.sticky-footer {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 80px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid rgba(255, 255, 255, 0.904);
+    margin-bottom: 17px;
+}
+
+.social-media-icons {
+    margin-bottom: -3px;
+    /* Remove margin-bottom */
+    margin-top: 0;
+    /* Optional: Adjust if needed */
+}
+
+.social-media-icons a img {
+    width: 40px;
+    /* Adjust the size of the icons */
+    height: 40px;
+    /* Adjust the size of the icons */
+    margin: 0 5px;
+    /* Adjust spacing between icons */
+}
+
+.social-media-icons a img:hover {
+    border-radius: 20%;
+    background-color: rgba(0, 0, 0, 0.118);
+}
+
+.glass img {
+
+    border-radius: 50%;
+    max-width: 250px;
+    /* Ensure the image does not exceed the width of its container */
+    height: auto;
+    /* Maintain aspect ratio of the image */
+    margin-bottom: -260px;
+    /* Adjust spacing below the image if needed */
+    margin-top: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 @keyframes move {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(calc(100vw - 200px), 0);
     }
+
     50% {
         transform: translate(calc(100vw - 200px), calc(100vh - 200px));
     }
+
     75% {
         transform: translate(0, calc(100vh - 200px));
     }
@@ -122,6 +245,7 @@ button:hover {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -131,9 +255,9 @@ button:hover {
     color: red;
     animation: colorChange 16s infinite;
     position: relative;
-    text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.4), 
-        2px 2px 4px rgba(0, 0, 0, 0.3), 
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.4),
+        2px 2px 4px rgba(0, 0, 0, 0.3),
         3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -141,9 +265,9 @@ button:hover {
     color: black;
     animation: colorChangeBW 4s infinite;
     position: relative;
-    text-shadow: 
-        1px 1px 2px rgba(0, 0, 0, 0.4), 
-        2px 2px 4px rgba(0, 0, 0, 0.3), 
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.4),
+        2px 2px 4px rgba(0, 0, 0, 0.3),
         3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -151,17 +275,20 @@ button:hover {
     0% {
         color: rgb(255, 0, 0);
     }
+
     25% {
         color: rgb(255, 208, 0);
     }
+
     50% {
         color: rgb(9, 129, 13);
     }
+
     75% {
         color: rgb(12, 32, 183);
     }
+
     100% {
         color: rgb(255, 0, 0);
     }
 }
-
