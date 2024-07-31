@@ -115,10 +115,10 @@ h1.fade-in {
     animation: fadeIn 3s ease-in-out;
 }
 
-pre.fade-in {
+.unique {
     font-size: 21px;
     animation: fadeIn 5s ease-in-out;
-    letter-spacing:21.6px;
+    letter-spacing:22.6px;
     padding-left: 22px;
     color: white;
     text-shadow:
