@@ -25,7 +25,7 @@ html {
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 3rem;
-    color: black;
+    
     z-index: 10;
 
 }
@@ -70,7 +70,6 @@ html {
     /* Glass effect background */
     border: 2px solid rgba(254, 255, 252, 0.3);
     /* Slightly opaque border */
-    color: rgba(9, 9, 9, 0.699);
     padding: 10px 20px;
     /* Adjust padding to your preference */
     border-radius: 10px;
@@ -119,7 +118,7 @@ h1.fade-in {
     font-size: 21px;
     animation: fadeIn 5s ease-in-out;
     letter-spacing:22.6px;
-    padding-left: 22px;
+    padding-left: 23px;
     color: white;
     text-shadow:
         1px 1px 2px rgba(0, 0, 0, 0.4),
@@ -259,7 +258,10 @@ button b {
 }
 
 .flex {
-    color: red;
+    backdrop-filter: blur(10px);
+    /* Blur effect for the glass appearance */
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(255, 0, 0, 0.836);
     animation: colorChange 16s infinite;
     position: relative;
     text-shadow:
@@ -269,7 +271,10 @@ button b {
 }
 
 .on {
-    color: black;
+    backdrop-filter: blur(10px);
+    /* Blur effect for the glass appearance */
+    -webkit-backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.927);
     animation: colorChangeBW 4s infinite;
     position: relative;
     text-shadow:
