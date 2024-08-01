@@ -600,7 +600,7 @@ h3.my-profession {
 
 .service .service-item .service-item-inner:hover {
     box-shadow: 0 0 20px var(--bg-black-50);
-    border: 1.5px solid var(--bg-black-50);
+    border: 1.5px solid var(--skin-color);
 }
 
 .service .service-item .service-item-inner .icon {
@@ -673,10 +673,16 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item-inner {
-    border: 6px solid var(--bg-black-100);
-    border-radius: 10px;
+    background-color: var(--bg-black-100);
+    border: 5px solid var(--bg-black-50);
+    border-radius: 10px; 
     overflow: hidden;
     cursor: pointer;
+}
+.portfolio .portfolio-item-inner:hover {
+    box-shadow: 10px 0 20px var(--bg-black-50);
+    border: 5px solid var(--skin-color);
+    
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img {
@@ -908,4 +914,8 @@ h3.my-profession {
         max-width: 100%;
 
     }
+}
+
+.timeline-text u{
+    color: var(--skin-color);
 }
