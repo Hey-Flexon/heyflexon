@@ -2,21 +2,26 @@
 
 
 
-:root {
+body.dark {
     --bg-black-900: rgb(248, 244, 244);
     --bg-black-100: rgb(255, 255, 255);
     --bg-black-50: rgb(208, 207, 207);
     --text-black-900: rgb(0, 0, 0);
     --text-black-700: rgb(50, 52, 56);
+    --bg-shadow-100: rgba(125, 125, 125, 0.851);
+    
 }
 
-body.dark {
+:root {
 
     --bg-black-900: #151515;
     --bg-black-100: #222222;
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
+    --bg-shadow-100: rgba(255, 255, 255, 0.485);
+    
+    
 
 }
 
@@ -32,6 +37,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Mukta' sans-serif;
+    
 }
 
 ul {
@@ -55,10 +61,12 @@ ul {
     /* background-color: #f6f6f6; */
     /* z-index: 0; */
     opacity: 1;
+    
 }
 
 .main-content {
     padding-left: 270px;
+    
 
 }
 
@@ -114,6 +122,7 @@ ul {
     justify-content: center;
     align-items: center;
     background-color: var(--bg-black-100);
+    
 }
 
 .aside .logo {
@@ -797,7 +806,7 @@ h3.my-profession {
     width: 100%;
     color: #fff;
     display: flex;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px -2px 5px var(--bg-shadow-100);
     z-index: 1000;
     text-align: center;
     justify-content: center;
@@ -815,7 +824,7 @@ h3.my-profession {
     color: var(--text-black-900);
     text-align: center;
     padding: 5px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px -1px 5px var(--bg-shadow-100);
     margin: 0;
     border-radius: 10px 10px 0 0;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
